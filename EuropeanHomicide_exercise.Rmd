@@ -101,7 +101,7 @@ ggplot(data = Western_Europe) +
 
 2) Rmarkdown: 
 
-  - Edit the author of the document, 
+  - edit the author of the document, and convert 'Final Tasks' into heading #2 (like the other headings) 
   - add a `floating table of contents` to your Rmarkdown document, 
   - provide informative `chunk-names` and edit flags in your R chunks, and
   - automatically generate a `timestamp` to show when the document was last updated. (Hint: check the Rmarkdown episode in our Data Carpentry tutorial)
