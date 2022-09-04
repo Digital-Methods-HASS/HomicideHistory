@@ -15,15 +15,11 @@ This exercise is based on the dataset provided by [OurWorldInData project](https
 
 Understanding how homicide rates have changed prior to the modern era requires the help of historians and archivists. Manuel Eisner, a criminology professor at the University of Cambridge, and his colleagues published the Historical Violence Database \href{https://cjrc.osu.edu/research/interdisciplinary/hvd}: a compilation of data on long-term trends in homicide rates, in addition to qualitative information such as the cause of death, perpetrator and victim. This database is limited to countries with relatively complete historical records on violence and crime – mainly Western Europe and the US.
 
-Starting in the second half of the nineteenth century, these European regions have consistent police records of those accused of murder or manslaughter and annual counts of homicide victims. To go back further in time, reaching as far back as the thirteenth century, Eisner collected estimates (from historical records of coroner reports, court trials, and the police) of homicide rates made in over ninety publications by scholars.5
+Starting in the second half of the nineteenth century, these European regions have consistent police records of those accused of murder or manslaughter and annual counts of homicide victims. To go back further in time, reaching as far back as the thirteenth century, Eisner collected estimates (from historical records of coroner reports, court trials, and the police) of homicide rates made in over ninety publications by scholars.
 
-In the chart shown here we see long-run homicide rates for the five European regions.
+Homicide rates – measured as the number of homicides per 100,000 individuals – up to 1990 are sourced from Eisner’s (2003) publication and the Historical Violence Database. 
 
-Homicide rates – measured as the number of homicides per 100,000 individuals – up to 1990 are sourced from Eisner’s (2003) publication and the Historical Violence Database. These estimates have been combined, from 1990 onwards, with homicide rates from the Global Burden of Disease study.6
-
-In the 1300s, homicide rates in Western Europe ranged from 23 to 56 homicides per 100,000 individuals, comparable to the current rates in Latin America. Homicide rates then fell dramatically in all five regions from the 1300s to 1800s. The magnitude of this decline was similar across countries: homicide rates fell between 78 and 98%.
-
-Homicide rates in Europe today are much lower than in the past. England, Germany, Switzerland, and Italy reached their lowest levels in the 2000s; while the Netherlands, Belgium, and Scandinavia reached their minimums in the mid to late 1900s.
+Are homicide rates in Europe today lower or higher than in the past? Using the provided dataset, display and describe the long-run homicide rates for the five European regions: Italy, England, Germany, Netherlands and Scandinavia.
 
 ```{r library}
 library(tidyverse)
@@ -31,8 +27,8 @@ library(tidyverse)
 
 ## Load the available data from ourworldindata.org
 
-You should always interrogate the source of your data. Who compiled it, from where, what is missing, how representative the data are? Check the data/Metadata document to learn about the data provenance.
-, message
+You should always interrogate the source of your data. Who compiled it, from where, what is missing, how representative the data are? Check the data/Metadata.txt to learn about the data provenance.
+
 ```{r load-data}
 Western_Europe <- read_csv("data/homicide-rates-across-western-europe.csv")
 ```
