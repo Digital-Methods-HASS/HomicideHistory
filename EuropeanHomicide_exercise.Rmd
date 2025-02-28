@@ -9,6 +9,16 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE,
                       message=FALSE)
 ```
+#  Explore Homicide rates in NW Europe
+In this exercise, you will load a Manuel Eisner's dataset to capture the developments in homicides from Middle Ages to 20th century. 
+
+**Your task: Explore the data and create the visualisations as instructed in the script.** 
+
+- **Submit to Github this script with solutions and its knitted version.**  
+- **Submit to Brightspace a document with the (1) URL of this script and its knitted version in Github (2) answer of 250 words to the Final Question and (3) the Final Plot.**
+
+
+
 This exercise is based on the dataset provided by [OurWorldInData project](https://ourworldindata.org/homicides) based at the Oxford University.
 
 ## The long-term trend in Homicides in Western Europe
@@ -106,4 +116,6 @@ ggplot(data = Western_Europe) +
   - provide informative `chunk-names` and edit flags in your R chunks, and
   - automatically generate a `timestamp` to show when the document was last updated. (Hint: check the Rmarkdown episode in our Data Carpentry tutorial)
 
-3) Question: In <250 words articulate your answer on the basis of the data visualisations to the following question: are we more civilized today?
+###  Final question: 
+
+*In <250 words articulate your answer on the basis of the data visualisations to the following question*:** are we more civilized today?** *(Can you find an article or a book that discusses this topic?)*
