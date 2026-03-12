@@ -358,17 +358,19 @@ display: none;
 
 <div id="explore-homicide-rates-in-nw-europe" class="section level1">
 <h1>Explore Homicide rates in NW Europe</h1>
-<p>In this exercise, you will load a Manuel Eisner’s dataset to capture
-the developments in homicides from Middle Ages to 20th century.</p>
-<p><strong>Your task: Explore the data and create the visualisations as
+<p>In this exercise, you will load a Manuel Eisner’s dataset that
+captures the developments in homicides from Middle Ages to 20th
+century.</p>
+<p><strong>Your task: Explore the data and create visualisations as
 instructed in the script.</strong></p>
 <ul>
-<li><strong>Submit to Github this script with solutions and its knitted
-version.</strong><br />
+<li><strong>Upload to Github this .Rmd file with solutions and its .html
+knitted version.</strong><br />
 </li>
-<li><strong>Submit to Brightspace a document with the (1) URL of this
-script and its knitted version in Github (2) answer of 250 words to the
-Final Question and (3) the Final Plot.</strong></li>
+<li><strong>Submit to Brightspace a document that follows the template
+and contains (1) URL of this script and its knitted version in Github,
+(2) one plot of your choice, and (3) answer of 250 words to the Final
+Question.</strong></li>
 </ul>
 <p>This exercise is based on the dataset provided by <a href="https://ourworldindata.org/homicides">OurWorldInData project</a>
 based at the Oxford University.</p>
@@ -397,6 +399,8 @@ Using the provided dataset, display and describe the long-run homicide
 rates for the five European regions: Italy, England, Germany,
 Netherlands and Scandinavia.</p>
 <pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## Warning: package &#39;tidyverse&#39; was built under R version 4.3.3</code></pre>
+<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 4.3.3</code></pre>
 </div>
 <div id="load-the-available-data-from-ourworldindata.org" class="section level2">
 <h2>Load the available data from ourworldindata.org</h2>
@@ -429,7 +433,18 @@ is not very easy to work with.</p>
 <li>Use the <code>names()</code> function and assignment key to relabel
 this column to <code>homicides_per_100k</code></li>
 </ul>
-<pre class="r"><code># YOUR CODE</code></pre>
+<pre class="r"><code># names() function produces the names of columns as a character vector with 4 elements
+names(Western_Europe)</code></pre>
+<pre><code>## [1] &quot;Entity&quot;                                                                             
+## [2] &quot;Code&quot;                                                                               
+## [3] &quot;Year&quot;                                                                               
+## [4] &quot;Homicide rate in Europe over long-term (per 100,000) (homicides per 100,000 people)&quot;</code></pre>
+<pre class="r"><code># If we can select the fourth element, we can also rename it / reassign a name to it
+names(Western_Europe)[4] &lt;- &quot;bettername&quot;
+
+# check the new name!
+names(Western_Europe)</code></pre>
+<pre><code>## [1] &quot;Entity&quot;     &quot;Code&quot;       &quot;Year&quot;       &quot;bettername&quot;</code></pre>
 <p>Now, that you have looked at what the data looks like and what it
 represents, and streamlined it, let’s see what big picture it
 contains.</p>
@@ -449,8 +464,15 @@ column to the argument <code>color</code>.</li>
 <li>remember to change the <code>eval</code> flag so that the code chunk
 renders when knitted</li>
 </ul>
-<pre class="r"><code>ggplot(data = Western_Europe) + 
-  #....YOUR CODE GOES HERE</code></pre>
+<pre class="r"><code># option 1 - this one embeds the dataset in the ggplot as the first argument
+ggplot(data = Western_Europe, x = _______, y = ________) +
+  #....CONTINUE WITH YOUR OWN CODE
+
+
+# option 2 - this one starts with the dataset and continues with ggplot()
+Western_Europe %&gt;% 
+  ggplot(....)+
+  #....CONTINUE WITH YOUR OWN CODE</code></pre>
 <p>Alright, the homicide rates should all be descending over time. What
 a comfort. But the viz is not super clear. Let’s check the rates for
 individual countries.</p>
@@ -468,8 +490,7 @@ to split countries in separate charts</li>
 <li>change the facet “layout” to two columns and three rows so that the
 trends are easier to see in horizontal layout.</li>
 </ul>
-<pre class="r"><code>ggplot(data = Western_Europe) + 
-  #... YOUR CODE</code></pre>
+<pre class="r"><code>#... YOUR CODE</code></pre>
 </div>
 <div id="compare-the-trends-in-homicide-with-the-pattern-of-reign-duration-among-danish-rulers-through-time." class="section level2">
 <h2>Compare the trends in homicide with the pattern of reign duration
@@ -503,7 +524,7 @@ heading #2 (like the other headings)</li>
 <li>add a <code>floating table of contents</code> to your Rmarkdown
 document,</li>
 <li>provide informative <code>chunk-names</code> and edit flags in your
-R chunks, and</li>
+R chunks to <code>TRUE</code>, and</li>
 <li>automatically generate a <code>timestamp</code> to show when the
 document was last updated. (Hint: check the Rmarkdown episode in our
 Data Carpentry tutorial)</li>
@@ -511,9 +532,8 @@ Data Carpentry tutorial)</li>
 <div id="final-question" class="section level3">
 <h3>Final question:</h3>
 <p><em>In &lt;250 words articulate your answer on the basis of the data
-visualisations to the following question</em>:** are we more civilized
-today?** <em>(Can you find an article or a book that discusses this
-topic?)</em></p>
+visualisations to the following question</em>: <strong>are we more
+civilized today?</strong></p>
 </div>
 </div>
 </div>

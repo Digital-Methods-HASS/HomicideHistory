@@ -10,12 +10,12 @@ knitr::opts_chunk$set(echo = TRUE,
                       message=FALSE)
 ```
 #  Explore Homicide rates in NW Europe
-In this exercise, you will load a Manuel Eisner's dataset to capture the developments in homicides from Middle Ages to 20th century. 
+In this exercise, you will load a Manuel Eisner's dataset that captures the developments in homicides from Middle Ages to 20th century. 
 
-**Your task: Explore the data and create the visualisations as instructed in the script.** 
+**Your task: Explore the data and create visualisations as instructed in the script.** 
 
-- **Submit to Github this script with solutions and its knitted version.**  
-- **Submit to Brightspace a document with the (1) URL of this script and its knitted version in Github (2) answer of 250 words to the Final Question and (3) the Final Plot.**
+- **Upload to Github this .Rmd file with solutions and its .html knitted version.**  
+- **Submit to Brightspace a document that follows the template and contains (1) URL of this script and its knitted version in Github, (2) one plot of your choice,  and (3) answer of 250 words to the Final Question.**
 
 
 
@@ -55,8 +55,16 @@ Ok, the data look good except for the column `Homicide rate in Europe over long-
 
 - Use the `names()` function and assignment key to relabel this column to `homicides_per_100k` 
 
+
 ```{r relabel column}
-# YOUR CODE
+# names() function produces the names of columns as a character vector with 4 elements
+names(Western_Europe)
+
+# If we can select the fourth element, we can also rename it / reassign a name to it
+names(Western_Europe)[4] <- "bettername"
+
+# check the new name!
+names(Western_Europe)
 ```
 
 Now, that you have looked at what the data looks like and what it represents, and streamlined it, let's see what big picture it contains.
@@ -71,8 +79,16 @@ Now, that you have looked at what the data looks like and what it represents, an
 - remember to change the `eval` flag so that the code chunk renders when knitted 
 
 ```{r plot-homicides, eval = FALSE}
-ggplot(data = Western_Europe) + 
-  #....YOUR CODE GOES HERE
+# option 1 - this one embeds the dataset in the ggplot as the first argument
+ggplot(data = Western_Europe, x = _______, y = ________) +
+  #....CONTINUE WITH YOUR OWN CODE
+
+
+# option 2 - this one starts with the dataset and continues with ggplot()
+Western_Europe %>% 
+  ggplot(....)+
+  #....CONTINUE WITH YOUR OWN CODE
+
 ```
 Alright, the homicide rates should all be descending over time. What a comfort. But the viz is not super clear. Let's check the rates for individual countries.
 
@@ -86,8 +102,7 @@ You can visualize each country's trend separately by adding an extra argument to
 
 
 ```{r eval = FALSE}
-ggplot(data = Western_Europe) + 
-  #... YOUR CODE
+#... YOUR CODE
 
 ```
 
@@ -113,9 +128,9 @@ ggplot(data = Western_Europe) +
 
   - edit the author of the document, and convert 'Final Tasks' into heading #2 (like the other headings) 
   - add a `floating table of contents` to your Rmarkdown document, 
-  - provide informative `chunk-names` and edit flags in your R chunks, and
+  - provide informative `chunk-names` and edit flags in your R chunks to `TRUE`, and
   - automatically generate a `timestamp` to show when the document was last updated. (Hint: check the Rmarkdown episode in our Data Carpentry tutorial)
 
 ###  Final question: 
 
-*In <250 words articulate your answer on the basis of the data visualisations to the following question*:** are we more civilized today?** *(Can you find an article or a book that discusses this topic?)*
+*In <250 words articulate your answer on the basis of the data visualisations to the following question*: **are we more civilized today?** 
